@@ -12,7 +12,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     when 'google'
       provider :google_oauth2, ENV.fetch('GOOGLE_CLIENT_ID'), ENV.fetch('GOOGLE_CLIENT_SECRET'),
           {
-            redirect_uri: 'https://myapp-bbx2.abar.cloud'
+            redirect_uri: 'https://myapp-bbx2.abar.cloud/auth/google_oauth2/callback'
             }
 
     when 'barong'
